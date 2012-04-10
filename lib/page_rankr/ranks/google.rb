@@ -23,8 +23,7 @@ module PageRankr
 
       def params
         orig_url = @site.original_url
-        p "Orig_url #{orig_url}"
-        # {:client => "navclient-auto", :ch => @checksum, :features => "Rank", :q => "info:#{tracked_url}"}
+        {:client => "navclient-auto", :ch => @checksum, :features => "Rank", :q => "info:#{tracked_url}"}
         {:client => "navclient-auto", :ch => @checksum, :features => "Rank", :q => "info:#{orig_url}"}
       end
 
