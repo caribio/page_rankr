@@ -18,6 +18,10 @@ module PageRankr
     def scheme
       @uri.scheme
     end
+    
+    def original_url
+      @uri.to_s
+    end
 
     def domain
       @domain.domain
