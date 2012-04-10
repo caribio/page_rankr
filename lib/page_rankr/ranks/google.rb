@@ -8,7 +8,7 @@ module PageRankr
 
       def initialize(site)
         @site = PageRankr::Site(site)
-        @checksum = Checksum.generate("info:#{tracked_url}")
+        @checksum = Checksum.generate("info:#{orig_url}")
         
         super(site)
       end
@@ -23,7 +23,7 @@ module PageRankr
 
       def params
         orig_url = @site.original_url
-        p "Orig_url #{orig_url}"
+        # p "Orig_url #{orig_url}"
         {:client => "navclient-auto", :ch => @checksum, :features => "Rank", :q => "info:#{orig_url}"}
       end
 
