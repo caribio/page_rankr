@@ -8,6 +8,7 @@ module PageRankr
 
       def initialize(site)
         @site = PageRankr::Site(site)
+        orig_url = @site.original_url        
         @checksum = Checksum.generate("info:#{orig_url}")
         
         super(site)
